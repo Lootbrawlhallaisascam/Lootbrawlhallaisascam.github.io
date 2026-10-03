@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LootBrawlhalla is a Scam</title>
+  <link rel="icon" type="image/png" sizes="128x128" href="favicon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <header class="header">
+    <button class="translate-button" id="traductor" type="button" aria-pressed="false">Traducir a Español</button>
+    <p class="status" data-i18n="status">Created by: NULL</p>
+    <h1 class="title" data-texto="LOOTBRAWLHALLA IS A SCAM"><span data-i18n="heading">LOOTBRAWLHALLA IS A SCAM</span></h1>
+    <p class="subtitle"><strong class="highlighted-name">Lootbrawlhalla</strong><span data-i18n="subtitle-start"> is a Twitch channel that is supposedly giving out rewards to the community for watching live streams; it is run by </span><strong class="highlighted-name">Raulstg7</strong><span data-i18n="subtitle-middle">. We consider this to be an abusive behavior because, in order to earn 140 Mamooth Coins, you have to watch 500 hours of content. Here are the valid reasons of why </span><strong class="highlighted-name">LootBrawlhalla</strong><span data-i18n="subtitle-copula"> is a </span><strong class="highlighted-name" data-i18n="scam">scam</strong>:</p>
+  </header>
+
+  <main class="container">
+
+    <section class="videos">
+
+      <article class="panel">
+        <h2 class="panel-title" data-i18n="video-title">Arcjk · Lets Talk About Raulstg7 (English)</h2>
+        <div class="video-frame">
+          <iframe
+            src="https://www.youtube.com/embed/XJGungTG7FU"
+            title="Vídeo de YouTube"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </article>
+
+      <article class="panel">
+        <h2 class="panel-title" data-i18n="local-title">Yerah´s Video · The Truth About Raulstg7 (Spanish)</h2>
+        <div class="video-frame">
+          <a
+            class="release-link"
+            href="https://github.com/Lootbrawlhallaisascam/LootbrawlhallaIsAScam/releases"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-i18n="release-link">Watch the video on GitHub Releases</a>
+        </div>
+      </article>
+
+    </section>
+
+    <section class="panel tweet-panel">
+      <h2 class="panel-title" data-i18n="tweet-title">Kresuu's Tweet · Raulstg7's predatory scam (English)</h2>
+      <div class="tweet-container">
+        <blockquote class="twitter-tweet" data-theme="dark">
+
+          <a href="https://x.com/Kresuuu/status/2101365445324316919"></a>
+        </blockquote>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p data-i18n="footer">end of transmission_</p>
+  </footer>
+
+  <script>
+    const translations = {
+      en: {
+        status: "Created by: NULL",
+        heading: "LOOTBRAWLHALLA IS A SCAM",
+        "subtitle-start": " is a Twitch channel that is supposedly giving out rewards to the community for watching live streams; it is run by ",
+        "subtitle-middle": ". We consider this to be an abusive behavior because, in order to earn 140 Mamooth Coins, you have to watch 500 hours of content. Here are the valid reasons of why ",
+        "subtitle-copula": " is a ",
+        scam: "scam",
+        "video-title": "Arcjk · Lets Talk About Raulstg7 (English)",
+        "local-title": "Yerah´s Video · The Truth About Raulstg7 (Spanish)",
+        "release-link": "Watch the video on GitHub Releases",
+        "video-fallback": "Your browser does not support HTML5 video.",
+        "tweet-title": "Kresuu's Tweet · Raulstg7's predatory scam (English)",
+        footer: "end of transmission_"
+      },
+      es: {
+        status: "Creado por: NULL",
+        heading: "LOOTBRAWLHALLA ES UNA ESTAFA",
+        "subtitle-start": " es un canal de Twitch que supuestamente ofrece recompensas a la comunidad por ver transmisiones en vivo; lo dirige ",
+        "subtitle-middle": ". Consideramos que es una práctica abusiva porque, para obtener 140 Mammoth Coins, hay que ver 500 horas de contenido. Estas son las razones por las que ",
+        "subtitle-copula": " es una ",
+        scam: "estafa",
+        "video-title": "Arcjk · Hablemos sobre Raulstg7 (Inglés)",
+        "local-title": "Yerah · Así es Raulstg7 en realidad (Español)",
+        "release-link": "Ver el video en GitHub Releases",
+        "video-fallback": "Tu navegador no soporta vídeo HTML5.",
+        "tweet-title": "Tweet de Kresuu · Estafa de Raulstg7 (inglés)",
+        footer: "fin de la transmisión_"
+      }
+    };
+
+    const translateButton = document.querySelector("#traductor");
+    let language = "en";
+
+    translateButton.addEventListener("click", () => {
+      language = language === "en" ? "es" : "en";
+      document.documentElement.lang = language;
+      document.querySelectorAll("[data-i18n]").forEach((element) => {
+        element.textContent = translations[language][element.dataset.i18n];
+      });
+      document.querySelector(".title").dataset.texto = translations[language].heading;
+      document.title = language === "es" ? "Terminal // Acceso restringido" : "Terminal // Restricted Access";
+      translateButton.textContent = language === "es" ? "Translate to English" : "Traducir a Español";
+      translateButton.setAttribute("aria-pressed", String(language === "es"));
+    });
+  </script>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</body>
+</html>
